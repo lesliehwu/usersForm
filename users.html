@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<style>
+			body{
+				font-family:"Times New Roman",Georgia,Serif;
+			}
+
+			th{
+				display:inline-block;
+				list-style:none;
+				padding-right:60px;
+				font-weight:bold;
+
+			}
+
+			table{
+				border:thin solid black;
+			}
+
+			tbody{
+				padding-right:60px;
+			}
+
+			h1{
+				width:25%;
+				border-bottom:thin solid gray;
+			}
+
+			input{
+				border: thin solid lightgray;
+				display:inline-block;
+				width:200px;
+			}
+
+			label.field{
+				text-align:right;
+				width:100px;
+				float:left;
+			}
+
+			button{
+				margin-left:240px;
+			}
+
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("button").on("click",function(){
+					$("#first1").append($("#first").val());
+					$("#last1").append($("#last").val());
+					$("#email1").append($("#email").val());
+					$("#contact1").append($("#phone").val());
+					
+					
+				});
+			});
+
+		</script>
+	</head>
+	<body>
+		<table>
+			<th id="first1">First Name </th>
+			<th id="last1">Last Name </th>
+			<th id="email1">Email Address </th>
+			<th id="contact1">Contact # </th>
+			<tbody></tbody>
+		</table>
+
+		<h1>Add User</h1>
+		<form>
+			<p><label class="field" for="FirstName">First Name:</label><input type="text" name="firstName" placeholder="First Name" id="first" /></p>
+			<p><label class="field" for="LastName">Last Name:</label><input type="text" name="lastName" placeholder="Last Name" id="last" /></p>
+			<p><label class="field" for="Email">Email:</label><input type="text" name="email" placeholder="Email Address" id="email" /></p>
+			<p><label class="field" for="ContactNo.">Contact No.:</label><input type="text" name="email" placeholder="Phone #" id="phone"/></p>
+			<button type="button">Add User</button>
+		</form>
+	</body>
+</html>
